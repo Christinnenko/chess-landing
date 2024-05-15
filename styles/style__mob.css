@@ -1,4 +1,4 @@
-@media (min-width: 375px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .center {
     padding-left: calc(50% - 168px);
     padding-right: calc(50% - 168px);
@@ -127,7 +127,7 @@
   }
 
   .support-actions__text-highlight {
-    color: #f54932;
+    color: var(--color-font-highlight);
     letter-spacing: 0.5px;
   }
 
@@ -135,10 +135,15 @@
     gap: 16px;
     padding-left: calc(50% - 638px);
     padding-right: calc(50% - 638px);
+    justify-content: center;
   }
 
   .support-actions__bottom-content {
     gap: 0;
+  }
+
+  .support-actions__bottom {
+    flex-wrap: wrap;
   }
 
   .support-actions__table-tr {
@@ -265,7 +270,7 @@
   }
 
   .active-circle {
-    background-color: #313131;
+    background-color: var(--color-font);
   }
 
   .participants-nav,
@@ -312,7 +317,7 @@
   .arrow-stage-right,
   .arrow-stage-left {
     border-radius: 50%;
-    background-color: #313131;
+    background-color: var(--color-font);
     display: flex;
     justify-content: center;
     align-items: center;

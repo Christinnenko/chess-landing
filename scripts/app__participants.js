@@ -31,16 +31,6 @@ export const participantsList = {
       name: "Остап Бендер",
       rank: "Гроссмейстер",
     },
-    {
-      img: "image/participants-img.png",
-      name: "1",
-      rank: "Чемпион мира по шахматам",
-    },
-    {
-      img: "image/participants-img.png",
-      name: "2",
-      rank: "Гроссмейстер",
-    },
   ],
 };
 
@@ -126,7 +116,7 @@ function sliderLeft(itemsToShow, itemWidth) {
   stopSliderInterval();
 
   let participantsCounter;
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1269) {
     participantsCounter = document.querySelector(".participants-nav__counter");
   } else {
     participantsCounter = document.querySelector(
@@ -174,7 +164,7 @@ function sliderRight(itemsToShow, itemWidth) {
   stopSliderInterval();
 
   let participantsCounter;
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1269) {
     participantsCounter = document.querySelector(".participants-nav__counter");
   } else {
     participantsCounter = document.querySelector(
@@ -221,7 +211,7 @@ function sliderRight(itemsToShow, itemWidth) {
 
 function startSliderInterval() {
   intervalId = setInterval(function () {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1269) {
       sliderLeft(itemsToShow, itemWidth);
     } else {
       sliderLeft(itemsToShowMobile, itemWidthMobile);

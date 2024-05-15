@@ -1,3 +1,8 @@
+:root {
+  --color-font: #313131;
+  --color-font-highlight: #f54932;
+}
+
 @font-face {
   font-family: "Merriweather";
   src: url("../fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
@@ -84,7 +89,7 @@ a {
 body {
   font-family: "GolosText", sans-serif;
   font-weight: 400;
-  color: #313131;
+  color: var(--color-font);
 }
 
 .center {
@@ -97,6 +102,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
   height: 700px;
+  background-size: cover;
 }
 
 .logo {
@@ -218,7 +224,7 @@ body {
 .running-line {
   font-family: "Merriweather", sans-serif;
   text-transform: uppercase;
-  background-color: #f54932;
+  background-color: var(--color-font-highlight);
   color: #fff;
   font-size: 22px;
   padding: 16px 0;
@@ -277,7 +283,7 @@ body {
 }
 
 .support-actions__text-highlight {
-  color: #f54932;
+  color: var(--color-font-highlight);
   letter-spacing: 0.5px;
 }
 
@@ -293,7 +299,6 @@ body {
 
 .support-actions__bottom {
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
   padding-left: calc(50% - 638px);
   padding-right: calc(50% - 638px);
@@ -342,7 +347,7 @@ body {
 
 .crossed-out {
   text-decoration: line-through;
-  text-decoration-color: #f54932;
+  text-decoration-color: var(--color-font-highlight);
   text-decoration-thickness: 2px;
   padding-right: 12px;
 }
@@ -356,7 +361,7 @@ body {
   font-family: "Merriweather", sans-serif;
   font-size: 54px;
   text-transform: uppercase;
-  width: 806px;
+  max-width: 806px;
   position: relative;
   display: inline-block;
   line-height: 68px;
@@ -455,7 +460,7 @@ body {
   width: 44px;
   height: 45px;
   border-radius: 50%;
-  background-color: #313131;
+  background-color: var(--color-font);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -479,7 +484,7 @@ body {
 }
 
 .participants-nav__total {
-  color: #313131;
+  color: var(--color-font);
   opacity: 0.6;
 }
 
@@ -533,7 +538,7 @@ body {
 
 .participant-rank {
   padding-bottom: 20px;
-  color: #313131;
+  color: var(--color-font);
   opacity: 0.6;
   font-size: 20px;
 }
@@ -559,7 +564,7 @@ body {
 }
 
 .footer-text {
-  color: #313131;
+  color: var(--color-font);
   opacity: 0.6;
   padding: 42px 72px 72px 72px;
 }
