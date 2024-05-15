@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style__tablet.css" />
+    <link rel="stylesheet" href="./styles/style__mob.css" />
     <title>Клуб четырех коней</title>
   </head>
   <body>
     <header class="header center">
       <div class="logo">
-        <div class="logo-img" alt="Логотип Клуба четырех коней"></div>
+        <div class="logo-img"></div>
         <p
           class="logo-text"
           data-first-word="Клуб"
@@ -40,14 +42,19 @@
       <!-- Рендер бегущей строки -->
     </div>
     <main class="main">
-      <section>
+      <section class="support-actions">
         <div id="support-nav" class="support-actions__top center">
           <p class="support-actions__text">
-            Чтобы поддержать Международный васюкинский турнир посетите лекцию на
-            тему:
-            <span class="support-actions__text-highlight"
-              >«Плодотворная дебютная идея»</span
-            >
+            Чтобы поддержать Международный васюкинский турнир
+            <img
+              class="support-actions__img-mob"
+              src="/image/chess-players.jpg"
+              alt="Шахматисты играют в шахматы"
+            />
+            посетите лекцию на тему:
+            <span class="support-actions__text-highlight">
+              «Плодотворная дебютная идея»
+            </span>
           </p>
           <img
             class="support-actions__img"
@@ -70,7 +77,7 @@
               О. Бендера
             </p>
             <table class="support-actions__table">
-              <tr>
+              <tr class="support-actions__table-tr">
                 <td class="support-actions__table-td-left">
                   Место проведения:
                 </td>
@@ -78,7 +85,7 @@
                   Клуб «Картонажник»
                 </td>
               </tr>
-              <tr>
+              <tr class="support-actions__table-tr">
                 <td class="support-actions__table-td-left">
                   Дата и время мероприятия:
                 </td>
@@ -86,17 +93,22 @@
                   22 июня 1927 г. в 18:00
                 </td>
               </tr>
-              <tr>
+              <tr class="support-actions__table-tr">
                 <td class="support-actions__table-td-left">
                   Стоимость входных билетов:
                 </td>
                 <td class="support-actions__table-td-right">20 коп.</td>
               </tr>
-              <tr>
+              <tr class="support-actions__table-tr table-tr-row">
                 <td class="support-actions__table-td-left">Плата за игру:</td>
-                <td class="support-actions__table-td-right">50 коп.</td>
+                <td class="table-tr-row-mob">&nbsp;50 коп.</td>
+                <td
+                  class="support-actions__table-td-right table-tr-row-mob__hidden"
+                >
+                  50 коп.
+                </td>
               </tr>
-              <tr>
+              <tr class="support-actions__table-tr">
                 <td class="support-actions__table-td-left-end">
                   Взнос на телеграммы:
                 </td>
@@ -119,14 +131,46 @@
               >Будущие источники обогащения васюкинцев</span
             >
           </h2>
-          <div id="stages" class="stages-list">
-            <!-- Рендер этапов преображения Васюков -->
+          <div class="stages-mob">
+            <div id="stages-items" class="stages-items">
+              <div id="stages" class="stages-list">
+                <!-- Рендер этапов преображения Васюков -->
+              </div>
+            </div>
+            <div class="stages-nav-mob">
+              <div class="stages-nav">
+                <a
+                  id="stages-left"
+                  class="arrow-stage-left stages-arrow-disabled"
+                >
+                  <img
+                    class="arrow-img"
+                    src="/image/nav-arrow.svg"
+                    alt="Назад"
+                  />
+                </a>
+                <div class="circles-container">
+                  <div class="circle active-circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+                <a id="stages-right" class="arrow-stage-right">
+                  <img
+                    class="arrow-img"
+                    src="image/nav-arrow.svg"
+                    alt="Вперед"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section>
         <div id="participants-nav" class="participants center">
-          <div class="participants-nav__wrap">
+          <div class="participants-nav-wrap">
             <h2 class="main-title">Участники турнира</h2>
             <div class="participants-nav">
               <a id="slider-left" class="arrow-left arrow-disabled">
@@ -144,6 +188,18 @@
           <div id="participants-list" class="participants-list center">
             <div id="participants-items" class="participants-items">
               <!-- Рендер участников турнира -->
+            </div>
+            <div class="participants-nav-mob">
+              <a id="slider-left-mob" class="arrow-left arrow-disabled">
+                <img class="arrow-img" src="/image/nav-arrow.svg" alt="Назад" />
+              </a>
+              <div>
+                <span class="participants-nav__counter-mob">1</span>
+                <span class="participants-nav__total">/ 6</span>
+              </div>
+              <a id="slider-right-mob" class="arrow-right">
+                <img class="arrow-img" src="image/nav-arrow.svg" alt="Вперед" />
+              </a>
             </div>
           </div>
         </div>

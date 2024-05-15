@@ -54,39 +54,72 @@ export function renderAppParticipants() {
 
   let sliderLeftButton = document.getElementById("slider-left");
   if (sliderLeftButton) {
-    sliderLeftButton.onclick = sliderRight;
+    sliderLeftButton.onclick = function () {
+      sliderRight(itemsToShow, itemWidth);
+    };
   }
 
   let sliderRightButton = document.getElementById("slider-right");
   if (sliderRightButton) {
-    sliderRightButton.onclick = sliderLeft;
+    sliderRightButton.onclick = function () {
+      sliderLeft(itemsToShow, itemWidth);
+    };
   }
 
-  // Устанавливаем общее количество участников
+  let sliderLeftButtonMob = document.getElementById("slider-left-mob");
+  if (sliderLeftButtonMob) {
+    sliderLeftButtonMob.onclick = function () {
+      sliderRight(itemsToShowMobile, itemWidthMobile);
+    };
+  }
+
+  let sliderRightButtonMob = document.getElementById("slider-right-mob");
+  if (sliderRightButtonMob) {
+    sliderRightButtonMob.onclick = function () {
+      sliderLeft(itemsToShowMobile, itemWidthMobile);
+    };
+  }
+
   let participantsTotal = document.querySelector(".participants-nav__total");
   participantsTotal.innerText = `/ ${participantsList.participants.length}`;
 }
 
 function toggleArrowDisabled(offset) {
   let sliderLeftButton = document.getElementById("slider-left");
+  let sliderLeftButtonMob = document.getElementById("slider-left-mob");
   if (offset === 0) {
     sliderLeftButton.classList.add("arrow-disabled");
+    sliderLeftButton.disabled = true;
+    sliderLeftButtonMob.classList.add("arrow-disabled");
+    sliderLeftButtonMob.disabled = true;
   } else {
     sliderLeftButton.classList.remove("arrow-disabled");
+    sliderLeftButton.disabled = false;
+    sliderLeftButtonMob.classList.remove("arrow-disabled");
+    sliderLeftButtonMob.disabled = false;
   }
 }
 
+let itemsToShow = 3; // количество элементов которые нужно показать на десктопе
+let itemWidth = 414; // ширина одного элемента на десктопе
+let itemsToShowMobile = 1; //количество элементов которые нужно показать на мобиле
+let itemWidthMobile = 348; // ширина одного элемента на мобиле
 const totalItems = participantsList.participants.length; // Общее количество элементов в виде числа
-const itemsToShow = 3; // Количество элементов, которые можно показать одновременно
-const itemWidth = 414; // Ширина каждого элемента
 const lastItems = totalItems % itemsToShow; //Кол-во элементов на последнем клике
 
 let offset = 0;
 
-function sliderLeft() {
-  let participantsCounter = document.querySelector(
-    ".participants-nav__counter"
-  );
+function sliderLeft(itemsToShow, itemWidth) {
+  stopSliderInterval();
+
+  let participantsCounter;
+  if (window.innerWidth >= 768) {
+    participantsCounter = document.querySelector(".participants-nav__counter");
+  } else {
+    participantsCounter = document.querySelector(
+      ".participants-nav__counter-mob"
+    );
+  }
 
   offset -= itemsToShow * itemWidth;
 
@@ -120,12 +153,21 @@ function sliderLeft() {
   toggleArrowDisabled(offset);
   let participantsList = document.getElementById("participants-items");
   participantsList.style.left = offset + "px";
+
+  startSliderInterval();
 }
 
-function sliderRight() {
-  let participantsCounter = document.querySelector(
-    ".participants-nav__counter"
-  );
+function sliderRight(itemsToShow, itemWidth) {
+  stopSliderInterval();
+
+  let participantsCounter;
+  if (window.innerWidth >= 768) {
+    participantsCounter = document.querySelector(".participants-nav__counter");
+  } else {
+    participantsCounter = document.querySelector(
+      ".participants-nav__counter-mob"
+    );
+  }
 
   offset += itemsToShow * itemWidth;
 
@@ -161,4 +203,26 @@ function sliderRight() {
   toggleArrowDisabled(offset);
   let participantsList = document.getElementById("participants-items");
   participantsList.style.left = offset + "px";
+  startSliderInterval();
 }
+
+function startSliderInterval() {
+  intervalId = setInterval(function () {
+    if (window.innerWidth >= 768) {
+      sliderLeft(itemsToShow, itemWidth);
+    } else {
+      sliderLeft(itemsToShowMobile, itemWidthMobile);
+    }
+  }, 4000);
+}
+
+let intervalId;
+
+function stopSliderInterval() {
+  clearInterval(intervalId);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  renderAppParticipants();
+  startSliderInterval();
+});

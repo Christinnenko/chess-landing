@@ -1,0 +1,136 @@
+@media (min-width: 1270px) and (max-width: 1345px) {
+  .stage:nth-child(7)::after {
+    width: 300px;
+    height: 200px;
+    right: -21px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1269px) {
+  .center {
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+  }
+
+  .header-title__top,
+  .header-title__middle,
+  .header-title__end {
+    font-size: 36px;
+  }
+
+  .support-actions__text,
+  .support-actions__text-highlight {
+    font-size: 28px;
+  }
+
+  .header-content {
+    width: 450px;
+  }
+
+  .header-btn {
+    width: 200px;
+    padding: 13px 20px;
+  }
+
+  .stage:nth-child(7)::after {
+    width: 254px;
+    height: 187px;
+    right: -72px;
+  }
+
+  .support-actions__bottom-img {
+    width: 432px;
+    height: 642px;
+  }
+
+  .support-actions__bottom {
+    padding-left: calc(50% - 538px);
+    padding-right: calc(50% - 538px);
+  }
+
+  .main {
+    gap: 50px;
+  }
+}
+
+@media (min-width: 1090px) and (max-width: 1199px) {
+  .support-actions__table {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  .center {
+    padding-left: calc(50% - 511px);
+    padding-right: calc(50% - 511px);
+  }
+
+  .header-title__top,
+  .header-title__middle,
+  .header-title__end {
+    font-size: 32px;
+  }
+
+  .header-content {
+    width: 400px;
+  }
+
+  .support-actions__text,
+  .support-actions__text-highlight {
+    font-size: 22px;
+  }
+
+  .header-btn {
+    width: 200px;
+    padding: 13px 20px;
+  }
+
+  .main {
+    gap: 60px;
+  }
+
+  .support-actions__text {
+    line-height: 43px;
+  }
+
+  .stage {
+    gap: 8px;
+    padding: 11px;
+  }
+
+  .support-actions__bottom-img {
+    width: 400px;
+    height: 519px;
+  }
+
+  .support-actions__bottom {
+    padding-left: calc(50% - 490px);
+    padding-right: calc(50% - 490px);
+  }
+
+  .support-actions__text-right {
+    width: 600px;
+  }
+
+  .support-actions__table {
+    width: 600px;
+  }
+
+  .support-actions__bottom-content-info {
+    font-size: 17px;
+  }
+
+  .stage:nth-child(7)::after {
+    width: 291px;
+    height: 148px;
+    right: -11px;
+    bottom: 6px;
+    position: relative;
+  }
+
+  .stage-text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1089px) {
+}

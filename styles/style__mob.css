@@ -1,0 +1,372 @@
+@media (min-width: 375px) and (max-width: 768px) {
+  .center {
+    padding-left: calc(50% - 168px);
+    padding-right: calc(50% - 168px);
+  }
+
+  .header {
+    background-image: url(/image/header-background-mob.png);
+    height: 774px;
+  }
+
+  .logo {
+    gap: 6px;
+    padding: 16px 0 37px 0;
+  }
+
+  .logo-img {
+    background-size: auto 107%, auto 100%;
+    width: 80px;
+    height: 27px;
+  }
+
+  .logo-text {
+    font-size: 15px;
+    letter-spacing: -0.4px;
+  }
+
+  .header-content {
+    width: 335px;
+  }
+
+  .header-title {
+    padding-bottom: 19px;
+  }
+
+  .header-title__top,
+  .header-title__middle,
+  .header-title__end {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .header-title__top {
+    margin-bottom: -4px;
+  }
+
+  .header-text {
+    padding-bottom: 31px;
+    text-align: left;
+  }
+
+  .header-btns {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .header-btn {
+    width: 335px;
+    height: 40px;
+    padding: 13px 80px;
+  }
+
+  .dark-btn {
+    padding: 24px 43px;
+  }
+
+  .light-btn {
+    border: 0 solid #1f1f1f;
+    background: #fff;
+    opacity: 0.9;
+    padding: 15px 81px 32px 81px;
+  }
+
+  .running-line {
+    font-size: 16px;
+    padding: 9px 0;
+  }
+
+  .running-line__circle {
+    margin: 5px 6px 2px 8px;
+  }
+
+  .main {
+    padding: 43px 0 61px 0;
+  }
+
+  .support-actions__top {
+    flex-direction: column;
+    gap: 64px;
+    margin-bottom: 36px;
+  }
+
+  .support-actions__img-mob {
+    display: flex;
+    width: 335px;
+    height: 212px;
+    border-radius: 50% / 50%;
+    margin: 20px 0 24px 0;
+  }
+
+  .support-actions__img {
+    display: none;
+  }
+
+  .support-actions__text {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .support-actions__bottom-img {
+    height: 450px;
+    width: 390px;
+  }
+
+  .support-actions__text-right {
+    width: 294px;
+    margin: -77px 0 25px 0;
+    line-height: 38px;
+  }
+
+  .support-actions__table-td-left {
+    margin-top: 5px;
+    border-right: none;
+    border-bottom: none;
+    display: flex;
+    width: auto;
+  }
+
+  .support-actions__text-highlight {
+    color: #f54932;
+    letter-spacing: 0.5px;
+  }
+
+  .support-actions__bottom {
+    gap: 16px;
+    padding-left: calc(50% - 638px);
+    padding-right: calc(50% - 638px);
+  }
+
+  .support-actions__bottom-content {
+    gap: 0;
+  }
+
+  .support-actions__table-tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .support-actions__table-td-left-end {
+    border-right: none;
+  }
+
+  .support-actions__bottom-content {
+    padding-left: calc(50% - 168px);
+    padding-right: calc(50% - 168px);
+  }
+
+  .support-actions__table-td-right,
+  .support-actions__table-td-right-end {
+    padding-left: 0;
+  }
+
+  .support-actions__table-td-right-end {
+    margin-bottom: 22px;
+  }
+
+  .support-actions__bottom-content-info {
+    font-size: 18px;
+  }
+
+  .support-actions__table-td-right {
+    width: auto;
+    margin: 0 0 7px 0;
+  }
+
+  .table-tr-row-mob__hidden {
+    display: none;
+  }
+
+  .table-tr-row-mob {
+    display: flex;
+    font-weight: 600;
+    width: 100px;
+    margin: 6px 0px 15px 7px;
+  }
+
+  .table-tr-row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #d0d0d0;
+    margin-bottom: 12px;
+  }
+
+  .main-title {
+    font-size: 36px;
+    width: 250px;
+    line-height: 42px;
+    margin-bottom: 40px;
+  }
+
+  .main {
+    gap: 117px;
+  }
+
+  .main-title__small {
+    font-size: 18px;
+    margin: 8px 0px 0px 0px;
+    line-height: 12px;
+    line-height: 24px;
+    width: 300px;
+  }
+
+  .stage:nth-child(7)::after {
+    background-image: none;
+  }
+
+  .stages-mob::before {
+    content: "";
+    background-image: url(/image/airplane.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: rotate(-3deg);
+    width: 332px;
+    height: 495px;
+    right: -7px;
+    bottom: 0px;
+    z-index: 2;
+    animation: tilt 5s infinite ease-in-out;
+  }
+
+  .stage-text {
+    font-size: 18px;
+    line-height: 22px;
+    width: 300px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .stage {
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    float: left;
+    padding: 64px 25px 40px 20px;
+    gap: 28px;
+  }
+
+  .stages-nav-mob {
+    display: block;
+    z-index: 3;
+  }
+
+  .circles-container {
+    display: flex;
+    gap: 6px;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
+
+  .active-circle {
+    background-color: #313131;
+  }
+
+  .participants-nav,
+  .stages-nav {
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 28px;
+    display: flex;
+  }
+
+  .stages {
+    padding-bottom: 0;
+  }
+
+  .stages-items {
+    width: 335px;
+    margin: 51px 0 0 0;
+    overflow: hidden;
+  }
+
+  .stages-list {
+    position: relative;
+    display: flex;
+  }
+
+  .stages-list::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .stages-mob {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .stage-number {
+    width: 40px;
+    height: 35px;
+  }
+
+  .arrow-stage-right,
+  .arrow-stage-left {
+    border-radius: 50%;
+    background-color: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+  }
+
+  .arrow-stage-right {
+    transform: rotate(180deg);
+  }
+
+  .arrow-left,
+  .arrow-right,
+  .arrow-stage-right,
+  .arrow-stage-left {
+    height: 36px;
+    width: 36px;
+    padding: 10px 12px 10px 9px;
+  }
+
+  .participant-img {
+    width: 245px;
+    height: 275px;
+    margin-left: 48px;
+  }
+
+  .participants-list {
+    margin-top: -56px;
+    margin-bottom: 38px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .participants-nav-mob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .participants-nav {
+    display: none;
+  }
+
+  .footer-text {
+    padding: 42px 30px 60px 20px;
+  }
+
+  .stages-arrow-disabled,
+  .stages-arrow-disabled:hover,
+  .stages-arrow-disabled:focus {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+  }
+}
