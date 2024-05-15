@@ -15,4 +15,5 @@ HTML, CSS, JavaScript (без использования сторонних би
 - карусель с этапами не зациклена и не меняет слайды автоматически
 
 
-![Uploading 2024-05-15_20-30-11.png…]()
+![image](https://github.com/Christinnenko/chess-landing/assets/135636897/9ff7055a-0427-40b8-b032-15a5641c5b3f)
+
