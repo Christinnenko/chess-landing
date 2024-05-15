@@ -33,7 +33,6 @@ export function renderAppStages() {
   let appStages = document.getElementById("stages");
 
   let stagesHTML = "";
-
   let currentText = ""; // Текст текущего слайда
   let totalSlides = 0; // Общее количество слайдов
 
@@ -42,7 +41,7 @@ export function renderAppStages() {
 
   if (isMobile) {
     stagesList.stages.forEach((stage, index) => {
-      // Если описание короткое, добавляем его к текущему тексту слайда
+      // Если описание короткое (менее 72 символов(согласно макету)), добавляем его к текущему тексту слайда
       if (stage.description.length < 72) {
         currentText += `
           <p class="stage-text">
@@ -103,6 +102,7 @@ export function renderAppStages() {
   }
 }
 
+//кнопки навигации по слайдеру
 function toggleArrowStageDisabled(offset, totalSlides) {
   let sliderLeftButton = document.getElementById("stages-left");
   let sliderRightButton = document.getElementById("stages-right");
@@ -127,9 +127,8 @@ function toggleArrowStageDisabled(offset, totalSlides) {
 }
 
 const itemWidth = 355; // Ширина каждого этапа
-
-let offset = 0;
-let currentSlide = 0;
+let offset = 0; //начальное положение этапа
+let currentSlide = 0; //текущий слайд
 
 function stageLeft(totalSlides) {
   offset += itemWidth;

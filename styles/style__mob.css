@@ -6,7 +6,7 @@
 
   .header {
     background-image: url(/image/header-background-mob.png);
-    height: 774px;
+    height: 773px;
   }
 
   .logo {
@@ -173,7 +173,7 @@
     margin: 0 0 7px 0;
   }
 
-  .table-tr-row-mob__hidden {
+  .support-actions__table-td-right-hidden {
     display: none;
   }
 

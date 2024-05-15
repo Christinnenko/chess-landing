@@ -206,6 +206,7 @@ body {
 
 .light-btn {
   border: 2px solid #1f1f1f;
+  transition: all 0.7s;
 }
 
 .light-btn:hover,

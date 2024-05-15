@@ -31,6 +31,16 @@ export const participantsList = {
       name: "Остап Бендер",
       rank: "Гроссмейстер",
     },
+    {
+      img: "image/participants-img.png",
+      name: "1",
+      rank: "Чемпион мира по шахматам",
+    },
+    {
+      img: "image/participants-img.png",
+      name: "2",
+      rank: "Гроссмейстер",
+    },
   ],
 };
 
@@ -80,8 +90,10 @@ export function renderAppParticipants() {
     };
   }
 
-  let participantsTotal = document.querySelector(".participants-nav__total");
-  participantsTotal.innerText = `/ ${participantsList.participants.length}`;
+  let participantsTotal = document.querySelectorAll(".participants-nav__total");
+  participantsTotal.forEach((element) => {
+    element.innerText = `/ ${participantsList.participants.length}`;
+  });
 }
 
 function toggleArrowDisabled(offset) {
@@ -100,14 +112,15 @@ function toggleArrowDisabled(offset) {
   }
 }
 
+//слайдер участников турнира
+
 let itemsToShow = 3; // количество элементов которые нужно показать на десктопе
 let itemWidth = 414; // ширина одного элемента на десктопе
 let itemsToShowMobile = 1; //количество элементов которые нужно показать на мобиле
 let itemWidthMobile = 348; // ширина одного элемента на мобиле
 const totalItems = participantsList.participants.length; // Общее количество элементов в виде числа
 const lastItems = totalItems % itemsToShow; //Кол-во элементов на последнем клике
-
-let offset = 0;
+let offset = 0; //начальное расположение участника
 
 function sliderLeft(itemsToShow, itemWidth) {
   stopSliderInterval();
@@ -117,7 +130,7 @@ function sliderLeft(itemsToShow, itemWidth) {
     participantsCounter = document.querySelector(".participants-nav__counter");
   } else {
     participantsCounter = document.querySelector(
-      ".participants-nav__counter-mob"
+      ".participants-nav-mob__counter"
     );
   }
 
@@ -165,7 +178,7 @@ function sliderRight(itemsToShow, itemWidth) {
     participantsCounter = document.querySelector(".participants-nav__counter");
   } else {
     participantsCounter = document.querySelector(
-      ".participants-nav__counter-mob"
+      ".participants-nav-mob__counter"
     );
   }
 
